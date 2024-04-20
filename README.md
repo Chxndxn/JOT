@@ -33,4 +33,4 @@ JOT can:
 A list of tasks, to work on
 
 - [x] Setup the app with Vite(build tool) and pnpm (package manager)
-- [] Setup MaterialUi.
+- [x] Setup MaterialUi.
