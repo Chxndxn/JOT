@@ -5,7 +5,9 @@ function Header() {
     <header style={styles.rootContainer}>
       <div>
         {/* Replace with <AppIcon/> later */}
-        <p style={styles.tempLogo}>Jot</p>
+        <p style={styles.tempLogo}>
+          <a href="https://tinyurl.com/jotrepo">Jot</a>
+        </p>
       </div>
       <ul style={styles.headerOptionsContainer}>
         <li style={styles.listStyle}>Home</li>
