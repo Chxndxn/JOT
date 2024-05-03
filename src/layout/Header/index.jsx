@@ -1,21 +1,34 @@
 import styles from "./index.style";
+import { headerNavElements } from "../../constants/appConstants";
+import WebsiteLogo from "../WebsiteLogo";
+import {
+  AppBar,
+  List,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
+} from "@mui/material";
 
 function Header() {
+  const handleOnClick = (item) => {
+    console.log(`${item} has been clicked!`);
+  };
   return (
-    <header style={styles.rootContainer}>
-      <div>
-        {/* Replace with <AppIcon/> later */}
-        <p style={styles.tempLogo}>
-          <a href="https://tinyurl.com/jotrepo">Jot</a>
-        </p>
-      </div>
-      <ul style={styles.headerOptionsContainer}>
-        <li style={styles.listStyle}>Home</li>
-        <li style={styles.listStyle}>About</li>
-        <li style={styles.listStyle}>Contact</li>
-        <li style={styles.listStyle}>Login</li>
-      </ul>
-    </header>
+    <AppBar position="static" sx={styles.rootContainer}>
+      <Toolbar sx={styles.mainContainer}>
+        {/* App icon */}
+        <WebsiteLogo />
+
+        {/* App Navigation links */}
+        <List sx={styles.listContainer}>
+          {headerNavElements.map((item, index) => (
+            <ListItemButton key={index} onClick={() => handleOnClick(item)}>
+              <ListItemText style={styles.listStyle}>{item}</ListItemText>
+            </ListItemButton>
+          ))}
+        </List>
+      </Toolbar>
+    </AppBar>
   );
 }
 

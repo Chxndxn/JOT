@@ -9,12 +9,12 @@ export default {
     justifyContent: "space-between",
   },
   copyRight: {
-    variant:"p",
-    paddingInline:"24px",
+    variant: "p",
+    paddingInline: "24px",
     fontSize: "14px",
   },
   footerListContainer: {
     display: "flex",
-    paddingInline:"24px",
-  }
+    paddingInline: "24px",
+  },
 };

@@ -7,22 +7,22 @@ import {
   Typography,
 } from "@mui/material";
 import styles from "./index.style";
-
-const navItems = ["About", "Contact"];
+import { footerNavElements } from "../../constants/appConstants";
 
 function Footer() {
+  const date = new Date();
   return (
     <>
       <Box sx={styles.rootContainer}>
         <Box>
           <Typography sx={styles.copyRight}>
-            &copy; {new Date().getFullYear()} JOT. All rights reserved.
+            &copy; {date.getFullYear()} JOT. All rights reserved.
           </Typography>
         </Box>
 
         <Box>
           <List sx={styles.footerListContainer}>
-            {navItems.map((item) => (
+            {footerNavElements.map((item) => (
               <ListItem key={item} disablePadding>
                 <ListItemButton>
                   <ListItemText primary={item} />

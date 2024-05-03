@@ -1,5 +1,5 @@
-import Footer from "./layout/Footer";
-import Header from "./layout/Header";
+import { Header, Footer } from "./layout";
+
 function App() {
   return (
     <>
