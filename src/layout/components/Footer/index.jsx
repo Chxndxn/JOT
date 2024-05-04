@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import styles from "./index.style";
-import { footerNavElements } from "../../constants/appConstants";
+import { footerNavElements } from "../../../constants/appConstants";
 
 function Footer() {
   const date = new Date();
@@ -16,7 +16,7 @@ function Footer() {
       <Box sx={styles.rootContainer}>
         <Box>
           <Typography sx={styles.copyRight}>
-            &copy; {date.getFullYear()} JOT. All rights reserved.
+            &copy; {date.getFullYear()} JOT.
           </Typography>
         </Box>
 

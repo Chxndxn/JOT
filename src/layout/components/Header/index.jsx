@@ -1,18 +1,19 @@
 import styles from "./index.style";
-import { headerNavElements } from "../../constants/appConstants";
+import { headerNavElements } from "../../../constants/appConstants";
 import WebsiteLogo from "../WebsiteLogo";
 import {
   AppBar,
   List,
+  ListItem,
   ListItemButton,
   ListItemText,
   Toolbar,
 } from "@mui/material";
 
 function Header() {
-  const handleOnClick = (item) => {
-    console.log(`${item} has been clicked!`);
-  };
+  // const handleOnClick = (item) => {
+  //   console.log(`${item} has been clicked!`);
+  // };
   return (
     <AppBar position="static" sx={styles.rootContainer}>
       <Toolbar sx={styles.mainContainer}>
@@ -22,9 +23,17 @@ function Header() {
         {/* App Navigation links */}
         <List sx={styles.listContainer}>
           {headerNavElements.map((item, index) => (
-            <ListItemButton key={index} onClick={() => handleOnClick(item)}>
-              <ListItemText style={styles.listStyle}>{item}</ListItemText>
-            </ListItemButton>
+            <ListItem key={index} disablePadding>
+              <ListItemButton
+                // onClick={() => handleOnClick(item)}
+                href={item.path}
+              >
+                <ListItemText
+                  style={styles.listStyle}
+                  primary={item.pageName}
+                />
+              </ListItemButton>
+            </ListItem>
           ))}
         </List>
       </Toolbar>
