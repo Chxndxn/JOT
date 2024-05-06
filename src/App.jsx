@@ -1,10 +1,16 @@
-import Footer from "./layout/Footer";
-import Header from "./layout/Header";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routing from "./routes";
+
+import { Header, Footer } from "./layout/components";
+
 function App() {
   return (
     <>
-      <Header />
-      <Footer />
+      <Router>
+        <Header />
+        <Routing />
+        <Footer />
+      </Router>
     </>
   );
 }

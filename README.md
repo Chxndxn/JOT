@@ -32,5 +32,23 @@ JOT can:
 
 A list of tasks, to work on
 
-- [x] Setup the app with Vite(build tool) and pnpm (package manager)
+<!-- - [ ] -->
+
+### Components
+
+Implement Component
+
+- [ ] Suspense Fallback
+- [ ] Not Found
+- [ ] WebsiteLogo
+
+### Misc
+
+- [ ] Import font: Inter
+- [ ] Setup Custom theme
+
+### Completed
+
+- [x] Setup App Routing
 - [x] Setup MaterialUi.
+- [x] Setup the app with Vite(build tool) and pnpm (package manager)
