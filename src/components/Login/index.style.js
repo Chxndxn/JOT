@@ -6,19 +6,16 @@ export default {
   },
   card: {
     width: 417,
-    maxHeight: 456,
+    maxHeight: 570,
   },
   cardHeading: {
     fontSize: 30,
     fontWeight: "bold",
   },
-  formLabel: {
-    fontSize: 13,
-  },
-  gapX: {
+  gapY: {
     marginTop: 3,
   },
-  btnAndInputWidth: {
+  btnWidth: {
     width: "100%",
   },
 };
