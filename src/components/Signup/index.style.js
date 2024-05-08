@@ -6,19 +6,16 @@ export default {
   },
   card: {
     width: 417,
-    maxHeight: 735,
+    maxHeight: 853,
   },
   cardHeading: {
     fontSize: 30,
     fontWeight: "bold",
   },
-  formLabel: {
-    fontSize: 13,
-  },
-  gapX: {
+  gapY: {
     marginTop: 3,
   },
-  btnAndInputWidth: {
+  btnWidth: {
     width: "100%",
   },
   loginBox: {
@@ -29,5 +26,5 @@ export default {
     fontSize: 13,
     marginLeft: 1,
     cursor: "pointer",
-  },
+  }
 };
