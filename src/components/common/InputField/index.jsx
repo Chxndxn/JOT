@@ -33,12 +33,12 @@ const InputField = ({
       <TextField
         placeholder={placeholder}
         variant="outlined"
-        sx={styles.fieldWidth}
+        sx={styles.textField}
         size="small"
         type={type}
         name={name}
         value={value}
-        onChange={(e) => onChange(name, e.target.value)}
+        onChange={onChange}
         error={errorFlag}
         helperText={errMessage}
       />

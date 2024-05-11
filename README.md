@@ -41,6 +41,7 @@ Implement Component
 - [ ] Suspense Fallback
 - [ ] Not Found
 - [ ] WebsiteLogo
+- [ ] Auth page
 
 ### Misc
 
