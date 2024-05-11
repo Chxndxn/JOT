@@ -22,7 +22,7 @@ const rootRoutes = [
         element: <WorkInProgress />,
       },
       { path: pages.contact.relativePath, element: <WorkInProgress /> },
-      { path: pages.login.relativePath, element: <Authpage /> },
+      { path: pages.auth.relativePath, element: <Authpage /> },
       {
         path: "*",
         element: (

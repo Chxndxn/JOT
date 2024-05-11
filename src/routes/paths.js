@@ -8,12 +8,8 @@ export const pages = {
     relativePath: "contact",
     absolutePath: "/contact",
   },
-  login: {
-    relativePath: "login",
-    absolutePath: "/login",
-  },
-  signUp: {
-    relativePath: "signup",
-    absolutePath: "/signup",
+  auth: {
+    relativePath: "auth",
+    absolutePath: "/auth",
   },
 };

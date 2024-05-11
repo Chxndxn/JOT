@@ -33,7 +33,6 @@ export default {
   primaryBtn: {
     width: "100%",
     padding: "0.5rem 1rem",
-    border: "1px solid #292524",
     borderRadius: "0.5rem",
     fontSize: "0.875rem",
     lineHeight: "1.25rem",
