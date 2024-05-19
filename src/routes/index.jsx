@@ -7,9 +7,9 @@ import { rootRoutes } from './rootRoutes';
 const routes = [...rootRoutes];
 
 function Routing() {
-	const content = useRoutes(routes);
-	// ToDo: Implement fallback component
-	return <Suspense fallback={<p>Loading</p>}>{content}</Suspense>;
+ const content = useRoutes(routes);
+ // ToDo: Implement fallback component
+ return <Suspense fallback={<p>Loading</p>}>{content}</Suspense>;
 }
 
 export default Routing;
