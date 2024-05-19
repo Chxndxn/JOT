@@ -1,11 +1,11 @@
-import { Box, Button, Divider, Grid, Slide, Typography } from "@mui/material";
-import { useRef } from "react";
-import styles from "./index.style";
-import InputField from "../../common/InputField";
-import GoogleIcon from "@mui/icons-material/Google";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import PropTypes from "prop-types";
-import { useFormik } from "formik";
+import { Box, Button, Divider, Grid, Slide, Typography } from '@mui/material';
+import { useRef } from 'react';
+import styles from './index.style';
+import InputField from '../../common/InputField';
+import GoogleIcon from '@mui/icons-material/Google';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import PropTypes from 'prop-types';
+import { useFormik } from 'formik';
 
 const propTypes = {
 	loginFlag: PropTypes.bool.isRequired,
@@ -16,11 +16,11 @@ const propTypes = {
 function Login({ loginFlag, handleLoginFlag, validationSchema }) {
 	const formik = useFormik({
 		initialValues: {
-			email: "",
-			password: "",
+			email: '',
+			password: '',
 		},
 		validationSchema: validationSchema,
-		onSubmit: (values) => {
+		onSubmit: values => {
 			console.log(values);
 		},
 		validateOnChange: true,
@@ -90,11 +90,7 @@ function Login({ loginFlag, handleLoginFlag, validationSchema }) {
 							</Grid>
 						</Grid>
 
-						<Divider
-							sx={styles.gapY}
-							textAlign="center"
-							color="#A8A29E"
-						>
+						<Divider sx={styles.gapY} textAlign="center" color="#A8A29E">
 							Or continue with
 						</Divider>
 
@@ -111,13 +107,8 @@ function Login({ loginFlag, handleLoginFlag, validationSchema }) {
 								placeholder="demo@example.com"
 								value={formik.values.email}
 								onChange={formik.handleChange}
-								errorFlag={
-									formik.touched.email &&
-									Boolean(formik.errors.email)
-								}
-								errMessage={
-									formik.touched.email && formik.errors.email
-								}
+								errorFlag={formik.touched.email && Boolean(formik.errors.email)}
+								errMessage={formik.touched.email && formik.errors.email}
 							/>
 
 							<InputField
@@ -127,14 +118,8 @@ function Login({ loginFlag, handleLoginFlag, validationSchema }) {
 								placeholder="At least 8 characters"
 								value={formik.values.password}
 								onChange={formik.handleChange}
-								errorFlag={
-									formik.touched.password &&
-									Boolean(formik.errors.password)
-								}
-								errMessage={
-									formik.touched.password &&
-									formik.errors.password
-								}
+								errorFlag={formik.touched.password && Boolean(formik.errors.password)}
+								errMessage={formik.touched.password && formik.errors.password}
 							/>
 
 							<Box sx={styles.gapY}>
