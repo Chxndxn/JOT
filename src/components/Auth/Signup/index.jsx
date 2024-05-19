@@ -1,12 +1,12 @@
 /* Imports */
-import { Box, Button, Divider, Grid, Slide, Typography } from "@mui/material";
-import styles from "./index.style";
-import InputField from "../../common/InputField";
-import { useRef } from "react";
-import GoogleIcon from "@mui/icons-material/Google";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import PropTypes from "prop-types";
-import { useFormik } from "formik";
+import { Box, Button, Divider, Grid, Slide, Typography } from '@mui/material';
+import styles from './index.style';
+import InputField from '../../common/InputField';
+import { useRef } from 'react';
+import GoogleIcon from '@mui/icons-material/Google';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import PropTypes from 'prop-types';
+import { useFormik } from 'formik';
 
 const propTypes = {
 	loginFlag: PropTypes.bool.isRequired,
@@ -17,12 +17,12 @@ const propTypes = {
 function Signup({ loginFlag, handleLoginFlag, validationSchema }) {
 	const formik = useFormik({
 		initialValues: {
-			name: "",
-			email: "",
-			password: "",
+			name: '',
+			email: '',
+			password: '',
 		},
 		validationSchema: validationSchema,
-		onSubmit: (values) => {
+		onSubmit: values => {
 			console.log(values);
 		},
 		validateOnChange: true,
@@ -131,19 +131,11 @@ function Signup({ loginFlag, handleLoginFlag, validationSchema }) {
 							</Grid>
 						</Grid>
 
-						<Divider
-							sx={styles.gapY}
-							textAlign="center"
-							color="#A8A29E"
-						>
+						<Divider sx={styles.gapY} textAlign="center" color="#A8A29E">
 							Or continue with
 						</Divider>
 
-						<Box
-							component="form"
-							sx={styles.gapY}
-							onSubmit={formik.handleSubmit}
-						>
+						<Box component="form" sx={styles.gapY} onSubmit={formik.handleSubmit}>
 							<InputField
 								label="Your name"
 								placeholder="First and last name"
@@ -151,13 +143,8 @@ function Signup({ loginFlag, handleLoginFlag, validationSchema }) {
 								name="name"
 								value={formik.values.name}
 								onChange={formik.handleChange}
-								errorFlag={
-									formik.touched.name &&
-									Boolean(formik.errors.name)
-								}
-								errMessage={
-									formik.touched.name && formik.errors.name
-								}
+								errorFlag={formik.touched.name && Boolean(formik.errors.name)}
+								errMessage={formik.touched.name && formik.errors.name}
 							/>
 
 							<InputField
@@ -167,13 +154,8 @@ function Signup({ loginFlag, handleLoginFlag, validationSchema }) {
 								placeholder="demo@example.com"
 								value={formik.values.email}
 								onChange={formik.handleChange}
-								errorFlag={
-									formik.touched.email &&
-									Boolean(formik.errors.email)
-								}
-								errMessage={
-									formik.touched.email && formik.errors.email
-								}
+								errorFlag={formik.touched.email && Boolean(formik.errors.email)}
+								errMessage={formik.touched.email && formik.errors.email}
 							/>
 
 							<InputField
@@ -183,14 +165,8 @@ function Signup({ loginFlag, handleLoginFlag, validationSchema }) {
 								placeholder="At least 8 characters"
 								value={formik.values.password}
 								onChange={formik.handleChange}
-								errorFlag={
-									formik.touched.password &&
-									Boolean(formik.errors.password)
-								}
-								errMessage={
-									formik.touched.password &&
-									formik.errors.password
-								}
+								errorFlag={formik.touched.password && Boolean(formik.errors.password)}
+								errMessage={formik.touched.password && formik.errors.password}
 							/>
 
 							<Box sx={styles.gapY}>
