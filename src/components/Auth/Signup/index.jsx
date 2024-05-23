@@ -30,7 +30,6 @@ function Signup({ loginFlag, handleLoginFlag, validationSchema }) {
 
 	const containerRef = useRef(null);
 	return (
-		// TODO: Add logo on top of the card
 		<>
 			<Grid
 				container

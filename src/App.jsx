@@ -3,13 +3,26 @@ import Routing from './routes';
 
 import { Header, Footer } from './layout/components';
 
+const isAuthenticated = () => {
+	const location = window.location.href;
+	return !location.endsWith('/auth');
+};
+
 function App() {
 	return (
 		<>
 			<Router>
-				<Header />
-				<Routing />
-				<Footer />
+				{isAuthenticated() ? (
+					<>
+						<Header />
+						<Routing />
+						<Footer />
+					</>
+				) : (
+					<>
+						<Routing />
+					</>
+				)}
 			</Router>
 		</>
 	);

@@ -7,7 +7,6 @@ import { useState } from 'react';
 import { Box } from '@mui/material';
 import styles from './index.style';
 
-// TODO: Hide Header and Footer
 const Auth = () => {
 	const [loginFlag, setLoginFlag] = useState(true);
 
