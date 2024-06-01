@@ -39,9 +39,9 @@ A list of tasks, to work on
 Implement Component
 
 - [ ] Suspense Fallback
-- [ ] Not Found
+- [x] Not Found
 - [ ] WebsiteLogo
-- [ ] Auth page
+- [x] Auth page
 
 ### Misc
 
