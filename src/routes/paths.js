@@ -12,4 +12,8 @@ export const pages = {
 		relativePath: 'auth',
 		absolutePath: '/auth',
 	},
+	error: {
+		relativePath: 'error',
+		absolutePath: '/error',
+	},
 };
